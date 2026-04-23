@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Attack Detection</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input {
+            width: 250px;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Web Attack Detection System</h2>
+
+<form action="/predict" method="post">
+
+    <input type="text" name="f1" placeholder="Query Length" required><br>
+    <input type="text" name="f2" placeholder="Word Count" required><br>
+    <input type="text" name="f3" placeholder="Special Char Count" required><br>
+    <input type="text" name="f4" placeholder="Digit Count" required><br>
+    <input type="text" name="f5" placeholder="Contains Select (0/1)" required><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
